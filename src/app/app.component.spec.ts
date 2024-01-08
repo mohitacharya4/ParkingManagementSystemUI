@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ParkingManagementSystemUI'`, () => {
+  it(`should have as title ParkFlow Pro`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ParkingManagementSystemUI');
+    expect(app.title).toEqual('ParkFlow Pro');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ParkingManagementSystemUI');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ParkFlow Pro');
   });
 });

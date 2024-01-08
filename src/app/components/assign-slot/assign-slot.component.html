@@ -1,0 +1,19 @@
+<div class="assign-slot-form">
+  <h2 class="form-header">Find Slot</h2>
+  <div class="form-group">
+    <label for="vehicleType">Vehicle Type:</label>
+    <select id="vehicleType" class="form-control" [(ngModel)]="selectedVehicleType">
+      <option *ngFor="let vehicleType of vehicleTypes" [value]="vehicleType.vehicleTypeName">
+        {{ vehicleType.vehicleTypeName }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="registrationNumber">Registration Number:</label>
+    <input type="text" id="registrationNumber" class="form-control" [(ngModel)]="registrationNumber">
+  </div>
+  <div class="form-group">
+    <button (click)="assignSlot()" class="btn btn-primary">Assign Slot</button>
+  </div>
+
+</div>

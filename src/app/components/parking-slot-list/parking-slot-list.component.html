@@ -1,0 +1,23 @@
+<div class="parking-slot-list">
+  <h2 class="form-header">Parking Slots</h2>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Slot Number</th>
+          <th scope="col">Slot Type</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let slot of parkingSlots">
+          <td>{{ slot.slotNumber }}</td>
+          <td>{{ slot.slotType }}</td>
+          <td [ngClass]="{ 'available': slot.isAvailable, 'occupied': !slot.isAvailable }">
+            {{ slot.isAvailable ? 'Available' : 'Occupied' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="parkingSlots.length === 0" class="no-data">No parking slots found.</div>
+  </div>
+  
